@@ -25,6 +25,7 @@
             type: "GET",
             headers: {"Authorization": localStorage.getItem('user_token')},
             success: function(result){
+                console.log(result);
                 if (result.status == true) {
                     $('.user_id').val(result.data.id);
                     $('.name').html(result.data.name);
@@ -84,7 +85,7 @@
             });
         }
 
-        // Vefifymail 
+        // Vefifymail
         $(document).on('click','.verifyemail', function(){
             var email = $(this).attr('data-id');
             $.ajax({

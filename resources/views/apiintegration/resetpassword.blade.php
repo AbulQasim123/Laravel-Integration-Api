@@ -31,7 +31,7 @@
                 @endif
                 <form id="" method="POST">
                     @csrf
-                    <input type="hidden" name="user_id" value="{{$user[0]['id']}}">
+                    <input type="hidden" name="user_email" value="{{ $user[0]['email'] }}">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" class="form-control">
                     <label for="password_confirmation">Confirm Password</label>
